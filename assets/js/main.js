@@ -4,6 +4,7 @@
   var header=document.querySelector('.site-header');
   var toTop=document.querySelector('.to-top');
   var burger=document.querySelector('.hamburger');
+  var stickyCall=document.querySelector('.sticky-call');
   var nav=document.querySelector('.nav');
   var overlay=document.querySelector('.menu-overlay');
   function closeMenu(){
@@ -34,6 +35,7 @@
     var y=window.scrollY;
     if(header) header.classList.toggle('scrolled',y>10);
     if(toTop) toTop.classList.toggle('show',y>700);
+    if(stickyCall) stickyCall.classList.toggle('show',y>350);
     if(nav&&nav.classList.contains('open')&&Math.abs(y-lastY)>60){closeMenu();}
     lastY=y;
   },{passive:true});
