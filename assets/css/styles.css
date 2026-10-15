@@ -81,6 +81,7 @@ li{margin-bottom:.45em}
 .hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center 30%}
 .hero::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(100deg,rgba(10,27,48,.96) 20%,rgba(10,27,48,.82) 48%,rgba(10,27,48,.45) 100%)}
 .hero-inner{padding:84px 0 120px;max-width:980px}
+.hero-home .hero-inner{max-width:720px}
 .hero.slim .hero-inner{padding:64px 0 72px}
 .pill-badge{display:inline-flex;align-items:center;gap:9px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.22);color:#fff;font-size:.85rem;font-weight:700;padding:9px 18px;border-radius:999px;margin-bottom:22px;backdrop-filter:blur(6px)}
 .pill-badge .dot{width:8px;height:8px;border-radius:50%;background:#34d27b;box-shadow:0 0 0 4px rgba(52,210,123,.2)}
@@ -284,3 +285,4 @@ table.data tr:nth-child(even) td{background:var(--tint)}
 .feature-card .fc-body{padding:38px 36px}
 .fc-links{display:flex;gap:12px;flex-wrap:wrap;margin-top:20px}
 @media(max-width:640px){.feature-card{grid-template-columns:1fr}.feature-card .fc-media{min-height:210px}.feature-card .fc-body{padding:28px 24px}}
+@media(max-width:480px){.header-cta .btn{display:none}.brand-text .b1{font-size:.72rem}.brand-text .b2{font-size:.95rem}}
