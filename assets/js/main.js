@@ -22,6 +22,12 @@
     });
   }
   if(overlay) overlay.addEventListener('click',closeMenu);
+  /* tapping any menu link closes the mobile menu (lets anchor jumps scroll too) */
+  if(nav){
+    nav.addEventListener('click',function(e){
+      if(e.target.closest('a')&&nav.classList.contains('open')){closeMenu();}
+    });
+  }
   /* auto-close the open mobile menu when the user starts scrolling */
   var lastY=window.scrollY;
   window.addEventListener('scroll',function(){

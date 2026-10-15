@@ -14,8 +14,9 @@
   --wrap:1200px;
 }
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:var(--font-body);color:var(--body);font-size:17px;line-height:1.7;background:var(--white);-webkit-font-smoothing:antialiased}
+html{scroll-behavior:smooth;overflow-x:clip}
+body{font-family:var(--font-body);color:var(--body);font-size:17px;line-height:1.7;background:var(--white);-webkit-font-smoothing:antialiased;overflow-x:clip}
+h1,h2,h3{overflow-wrap:break-word}
 img{max-width:100%;height:auto;display:block}
 a{color:var(--orange-600);text-decoration:none}
 a:hover{text-decoration:underline}
@@ -273,3 +274,13 @@ table.data tr:nth-child(even) td{background:var(--tint)}
   .cta-inner{padding:54px 0}
 }
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+
+/* feature card: wide split card */
+.feature-card{display:grid;grid-template-columns:1fr 1.35fr;padding:0;overflow:hidden}
+.feature-card .fc-media{position:relative;min-height:280px}
+.feature-card .fc-media picture,.feature-card .fc-media img{position:absolute;inset:0;width:100%;height:100%}
+.feature-card .fc-media img{object-fit:cover}
+.feature-card .fc-media .icon-badge{position:absolute;left:16px;top:16px;margin:0;box-shadow:var(--shadow-md);border:3px solid #fff}
+.feature-card .fc-body{padding:38px 36px}
+.fc-links{display:flex;gap:12px;flex-wrap:wrap;margin-top:20px}
+@media(max-width:640px){.feature-card{grid-template-columns:1fr}.feature-card .fc-media{min-height:210px}.feature-card .fc-body{padding:28px 24px}}
