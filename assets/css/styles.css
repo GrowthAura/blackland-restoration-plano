@@ -160,6 +160,9 @@ li{margin-bottom:.45em}
 .step-num{font-family:var(--font-head);font-weight:800;font-size:2.4rem;color:transparent;-webkit-text-stroke:2px var(--orange-500);line-height:1;margin-bottom:14px}
 .step-card h3{font-size:1.12rem;margin-bottom:.5em}
 .step-card p{font-size:.94rem;margin:0}
+.steps-list{list-style:none;counter-reset:st;margin:1.4em 0 0;padding:0;display:grid;gap:14px}
+.steps-list li{counter-increment:st;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:18px 20px 18px 64px;position:relative;box-shadow:var(--shadow-sm)}
+.steps-list li::before{content:counter(st);position:absolute;left:18px;top:50%;transform:translateY(-50%);width:32px;height:32px;border-radius:50%;background:linear-gradient(135deg,var(--orange-500),var(--orange-600));color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center;font-size:.95rem}
 /* tables */
 .tbl-wrap{overflow-x:auto;border-radius:var(--radius);box-shadow:var(--shadow-sm);border:1px solid var(--line);margin:1.4em 0;background:#fff}
 table.data{width:100%;border-collapse:collapse;font-size:.96rem;min-width:560px}
