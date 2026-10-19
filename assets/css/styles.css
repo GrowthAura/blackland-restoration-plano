@@ -302,3 +302,8 @@ table.data tr:nth-child(even) td{background:var(--tint)}
 
 .fc-title{font-size:1.2rem;margin-bottom:14px}
 footer h3{font-size:1rem;margin-bottom:.8em;color:var(--ink)}
+
+.mobile-call{display:none;align-items:center;justify-content:center;width:44px;height:44px;border-radius:50%;background:var(--orange-500);color:#fff;font-size:1.3rem;box-shadow:0 8px 20px -8px rgba(244,112,31,.7);flex-shrink:0;transition:transform .18s,background .18s}
+.mobile-call:hover{background:var(--orange-600);color:#fff;text-decoration:none;transform:scale(1.06)}
+.mobile-call:active{transform:scale(.96)}
+@media(max-width:1020px){.mobile-call{display:inline-flex}.header-cta .btn{display:none}}
