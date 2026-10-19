@@ -299,3 +299,6 @@ table.data tr:nth-child(even) td{background:var(--tint)}
 .fc-links{display:flex;gap:12px;flex-wrap:wrap;margin-top:20px}
 @media(max-width:640px){.feature-card{grid-template-columns:1fr}.feature-card .fc-media{min-height:210px}.feature-card .fc-body{padding:28px 24px}}
 @media(max-width:480px){.header-cta .btn{display:none}.brand-text .b1{font-size:.72rem}.brand-text .b2{font-size:.95rem}.stat{min-width:0}.stat .num{font-size:1.35rem;line-height:1.15}.stat-card{gap:10px;padding:20px 14px}}
+
+.fc-title{font-size:1.2rem;margin-bottom:14px}
+footer h3{font-size:1rem;margin-bottom:.8em;color:var(--ink)}
