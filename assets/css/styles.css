@@ -357,5 +357,7 @@ footer h3{font-size:1rem;margin-bottom:.8em;color:var(--ink)}
    Image caps: in-content figure + split media images were displaying up to ~1167px tall when portrait;
    cap height with object-fit:cover so ratio is never stretched, height is controlled. */
 .hero-narrow .hero-inner{max-width:720px}
+/* His order 2026-10-28: service heroes a bit wider on desktop (720 -> 900px, mobile unaffected since viewport <900px stays full width). Home, cities, about, contact stay 720px. */
+.hero-service .hero-inner{max-width:900px}
 figure img{width:100%;max-height:520px;object-fit:cover;border-radius:var(--radius-lg)}
 .split .media img{max-height:480px;object-fit:cover}
