@@ -1,4 +1,56 @@
+# Blackland Restoration Co. — Plano, TX
+# All search engines and all AI crawlers are welcome on every page.
+# llms.txt: https://waterdamageplanotx.com/llms.txt
+
 User-agent: *
+Allow: /
+
+# OpenAI — ChatGPT, GPTBot, search
+User-agent: GPTBot
+Allow: /
+User-agent: ChatGPT-User
+Allow: /
+User-agent: OAI-SearchBot
+Allow: /
+
+# Anthropic — Claude
+User-agent: ClaudeBot
+Allow: /
+User-agent: anthropic-ai
+Allow: /
+User-agent: Claude-Web
+Allow: /
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+User-agent: Perplexity-User
+Allow: /
+
+# Google AI — Gemini, AI Overviews (Googlebot itself is covered by *)
+User-agent: Google-Extended
+Allow: /
+
+# Apple Intelligence
+User-agent: Applebot-Extended
+Allow: /
+
+# Meta AI
+User-agent: Meta-ExternalAgent
+Allow: /
+User-agent: Meta-ExternalFetcher
+Allow: /
+
+# Other AI search and training crawlers
+User-agent: cohere-ai
+Allow: /
+User-agent: YouBot
+Allow: /
+User-agent: DuckAssistBot
+Allow: /
+User-agent: CCBot
+Allow: /
+User-agent: Bytespider
 Allow: /
 
 Sitemap: https://waterdamageplanotx.com/sitemap.xml
