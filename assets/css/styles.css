@@ -135,7 +135,7 @@ li{margin-bottom:.45em}
 .icon-badge{width:56px;height:56px;border-radius:18px;background:var(--orange-100);display:flex;align-items:center;justify-content:center;font-size:1.616rem;margin-bottom:18px}
 .icon-badge.blue{background:var(--tint-2)}
 .photo-card{padding:0;overflow:hidden}
-.photo-card .ph{position:relative;height:200px;overflow:hidden}
+.photo-card .ph{position:relative;aspect-ratio:16/10;overflow:hidden}
 .photo-card .ph img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
 .photo-card:hover .ph img{transform:scale(1.05)}
 .photo-card .ph .icon-badge{position:absolute;left:16px;top:16px;margin:0;box-shadow:var(--shadow-md);border:3px solid #fff}
@@ -349,3 +349,13 @@ footer h3{font-size:1rem;margin-bottom:.8em;color:var(--ink)}
    1152px hero, leaving empty space on the right. Widen .hero .lede to the full hero width.
    Home hero is unaffected in practice: its hero-inner is 720px, so its lede stays within 720px. */
 .hero .lede{max-width:1152px}
+
+/* Hero round 2026-10-28 (his orders): service/location/about/contact heroes like home.
+   .hero-with-card .hero-inner stays 720px so the floating card sits beside the text with no overlap,
+   exactly like home. Policy pages have no card and keep the full-width hero.
+   Related Services list (service pages only, 4 links, unlinked elsewhere in body, never self).
+   Image caps: in-content figure + split media images were displaying up to ~1167px tall when portrait;
+   cap height with object-fit:cover so ratio is never stretched, height is controlled. */
+.hero-narrow .hero-inner{max-width:720px}
+figure img{width:100%;max-height:520px;object-fit:cover;border-radius:var(--radius-lg)}
+.split .media img{max-height:480px;object-fit:cover}
