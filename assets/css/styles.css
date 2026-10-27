@@ -307,3 +307,42 @@ footer h3{font-size:1rem;margin-bottom:.8em;color:var(--ink)}
 .mobile-call:hover{background:var(--orange-600);color:#fff;text-decoration:none;transform:scale(1.06)}
 .mobile-call:active{transform:scale(.96)}
 @media(max-width:1020px){.mobile-call{display:inline-flex}.header-cta .btn{display:none}}
+
+/* 320px fixes (sweep pass 8-9, 2026-10-27): hub services list single-column on mobile;
+   header fits 320px: narrower navbar padding, smaller brand mark, tighter CTA gap */
+.cols-2{columns:2;column-gap:32px}
+@media(max-width:640px){.cols-2{columns:1}}
+@media(max-width:480px){.navbar{padding:14px 16px}.brand-mark{width:40px;height:40px;border-radius:12px}.header-cta{gap:10px}}
+
+.foot-map{margin:26px 0 4px}
+.foot-map-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:10px;font-weight:700;color:#fff}
+.foot-map-head a{color:#ffb066}
+.map-frame{border:0;width:100%;height:320px;border-radius:14px}
+@media(max-width:640px){.map-frame{height:240px}}
+
+.pb-body h3 a{color:inherit}
+
+/* mobile overflow fix 2026-10-28: info-grid items must shrink below the 560px table min-width, so .tbl-wrap scrolls internally instead of stretching the page */
+.info-grid > *{min-width:0}
+
+/* mobile steps fix 2026-10-28: 10 pages carry an inline repeat(2,1fr) on .steps which beats the 640px stylesheet rule; force 1 column on phones only (!important beats inline normal styles; desktop/tablet 2-col untouched) */
+@media(max-width:640px){.steps{grid-template-columns:1fr !important}}
+
+/* H1 2-line hero fix 2026-10-28 (his order: desktop 2 lines, mobile also improved):
+   - hero copy widened to full wrap (was 980px, home 720px) so long H1s fit in 2 lines
+   - hero H1 capped at 48px (was 54.4px) - still large/premium, other headings untouched
+   - home hero-card moves below the copy on desktop (was absolute right, it overlapped a
+     widened H1) and becomes a horizontal 3-step emergency strip, so the Call button
+     stays prominent; on tablet/mobile the card was already static, unchanged */
+.hero-inner{max-width:1152px}
+.hero-home .hero-inner{max-width:1152px}
+.hero h1{font-size:clamp(2rem,4.6vw,3rem)}
+@media(min-width:1101px){
+  .hero-home .hero-card{position:static;width:100%;margin:34px 0 80px}
+  .hero-home .hero-card ol{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .hero-home .hero-card ol li{margin-bottom:0}
+  .hero-home .hero-card .btn{width:auto;padding:15px 34px}
+}
+@media(max-width:640px){
+  .hero h1{font-size:1.75rem}
+}
